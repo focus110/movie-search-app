@@ -6,7 +6,7 @@ const Search = () => {
     e.preventDefault();
   };
   return (
-    <div className="container py-16">
+    <div className="wrapper py-16">
       <form onSubmit={onSubmit}>
         <div className="">
           <label htmlFor="search" className="text-black">
