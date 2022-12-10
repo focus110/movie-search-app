@@ -15,8 +15,6 @@ const Search = () => {
     getMovies(search);
   };
 
-  console.log(movies);
-
   return (
     <div className="wrapper pt-12 pb-8">
       <form onSubmit={onSubmit}>

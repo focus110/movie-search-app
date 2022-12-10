@@ -12,7 +12,7 @@ import axios from "axios";
 
 const MovieState = (props) => {
   const initialState = {
-    movies: [],
+    movies: [{}, {}, {}, {}, {}, {}],
     filtered: [],
     error: null,
     loading: true,
@@ -27,7 +27,7 @@ const MovieState = (props) => {
   const getMovies = async (s) => {
     try {
       const res = await axios.get(`${baseUrl}?s=${s}&apikey=${apiKey}`);
-      dispatch({ type: GET_MOVIES, payload: res.data });
+      dispatch({ type: GET_MOVIES, payload: res?.data?.Search });
     } catch (err) {
       dispatch({ type: MOVIE_ERROR, payload: err.response.msg });
     }

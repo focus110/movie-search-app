@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import MovieContext from "../context/movies/movieContext";
 import MovieItem from "./MovieItem";
 
 const Movies = () => {
-  const movies = [{}, {}, {}, {}, {}, {}];
+  const movieContext = useContext(MovieContext);
+  const { movies } = movieContext;
   return (
     <div className="wrapper space-y-8 pb-8">
       <div>
