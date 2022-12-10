@@ -55,4 +55,4 @@
 
 ## About The Project
 
-<p align="center">A simple moview search app</p>
+<p align="center">A simple movie search app</p>
