@@ -12,7 +12,7 @@ const Movies = () => {
           First category
         </h2>
         <div className="w-full h-full space-x-4 overflow-x-scroll whitespace-nowrap scrollbar-hide">
-          {movies.map((item, i) => {
+          {movies?.map((item, i) => {
             return <MovieItem key={i} item={item} />;
           })}
         </div>
@@ -22,7 +22,7 @@ const Movies = () => {
           Second category
         </h2>
         <div className="w-full h-full space-x-4 overflow-x-scroll whitespace-nowrap scrollbar-hide">
-          {movies.map((item, i) => {
+          {movies?.map((item, i) => {
             return <MovieItem key={i} item={item} />;
           })}
         </div>

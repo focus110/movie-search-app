@@ -27,9 +27,9 @@ const contact = (state, action) => {
     case FILTER_MOVIES:
       return {
         ...state,
-        filtered: state.contacts.filter((contact) => {
+        filtered: state.movies.filter((movie) => {
           const regex = new RegExp(`${action.payload}`, "gi");
-          return contact.name.match(regex) || contact.email.match(regex);
+          return movie.Title.match(regex);
         }),
       };
     case CLEAR_FILTER:

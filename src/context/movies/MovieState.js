@@ -29,6 +29,7 @@ const MovieState = (props) => {
       const res = await axios.get(`${baseUrl}?s=${s}&apikey=${apiKey}`);
       dispatch({ type: GET_MOVIES, payload: res?.data?.Search });
     } catch (err) {
+      console.log(err);
       dispatch({ type: MOVIE_ERROR, payload: err.response.msg });
     }
   };
