@@ -20,7 +20,7 @@ module.exports = {
         "onyx-grey": "#F7F7F7",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/images/hero-pattern.svg')",
+        hero: "url('/src/assets/images/hero.png')",
         "holding-phone": "url('/src/assets/images/holding-phone.png')",
         "about-abstract": "url('/src/assets/images/abstract-bg.png')",
       },
