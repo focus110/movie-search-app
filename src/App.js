@@ -1,16 +1,17 @@
 import "./App.css";
-import Hero from "./components/Hero";
-import Movies from "./components/Movies";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Search from "./components/Search";
+import Main from "./pages/Main";
 
 function App() {
   return (
     <div className="">
-      <Navbar />
-      <Hero />
-      <Search />
-      <Movies />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
