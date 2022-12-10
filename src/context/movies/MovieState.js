@@ -20,7 +20,7 @@ const MovieState = (props) => {
 
   const [state, dispatch] = useReducer(movieReducer, initialState);
 
-  const baseUrl = "http://img.omdbapi.com/";
+  const baseUrl = "http://omdbapi.com/";
   const apiKey = process.env.REACT_APP_FIREBASE_API_KEY;
 
   // Get Movies
