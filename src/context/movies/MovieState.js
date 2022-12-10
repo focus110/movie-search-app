@@ -24,9 +24,9 @@ const MovieState = (props) => {
   const apiKey = process.env.REACT_APP_FIREBASE_API_KEY;
 
   // Get Movies
-  const getMovies = async () => {
+  const getMovies = async (s) => {
     try {
-      const res = await axios.get(`${baseUrl}api/contacts`);
+      const res = await axios.get(`${baseUrl}?s=${s}&apikey=${apiKey}`);
       dispatch({ type: GET_MOVIES, payload: res.data });
     } catch (err) {
       dispatch({ type: MOVIE_ERROR, payload: err.response.msg });
@@ -51,7 +51,7 @@ const MovieState = (props) => {
   return (
     <movieContext.Provider
       value={{
-        movies: state.contacts,
+        movies: state.movies,
         filtered: state.filtered,
         error: state.error,
         filterMovies,
