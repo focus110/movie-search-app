@@ -4,7 +4,7 @@ const MovieItem = ({ item, i }) => {
   return (
     <div
       key={i}
-      className="bg-black rounded-[12px] w-[300px] h-[300px] inline-block cursor relative p-2"
+      className="bg-black rounded-[12px] w-[200px] h-[200px] md:w-[300px] md:h-[300px] inline-block cursor relative p-2"
     >
       <img className="w-full h-auto block" src={``} alt={item.title} />
       {/* <div className="absolute top-0 left-0 rounded-[12px] w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white">
